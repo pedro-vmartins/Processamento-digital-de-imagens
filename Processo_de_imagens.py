@@ -69,7 +69,7 @@ print(MODEL_DIR, IMAGE_DIR)
 from google.colab import drive
 drive.mount('/content/gdrive')
 
-!cp -r /content/gdrive/MyDrive/fotos/ fotos
+!cp -r /content/gdrive/MyDrive/fotos/ fotos //nome da sua pasta
 
 """# Carregamento da rede neural pré-treinada"""
 
@@ -134,7 +134,7 @@ class_names.index('cup')
 rgb = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 plt.imshow(rgb)
 
-img = cv2.imread('fotos/maya.jpg')
+img = cv2.imread('fotos/maya.jpg') //nome da sua imagem
 plt.imshow(img);
 
 """#Visualização em tons de cinza"""
@@ -151,7 +151,7 @@ plt.plot(histograma);
 """# Predição e visualização"""
 
 from skimage.io import imread
-img = imread('fotos/maya.jpg')
+img = imread('fotos/maya.jpg') //nome da sua imagem
 plt.imshow(img);
 
 resultados = model.detect([img], verbose = 0)
